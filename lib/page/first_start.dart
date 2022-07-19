@@ -44,17 +44,7 @@ class OnboardingPage1 extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                  colors: [
-
-                    Color(0xB2DB2424),
-                    Color(0xFFB21111),
-                  ],
-                  begin: FractionalOffset(0.0, 0.0),
-                  end: FractionalOffset(0.0, 1.0),
-                  stops: [0.0, 1.0],
-                  tileMode: TileMode.clamp),
-
+              color: Color(0xFFFF4B3A),
               border: Border.all(
                 width: 0.0,
                 color: const Color.fromRGBO(255, 75, 58, 100),
@@ -109,10 +99,10 @@ class OnboardingPage1 extends StatelessWidget {
               gradient: const LinearGradient(
                   colors: [
                     Colors.transparent,
-                    Color(0xFFB21111),
+                    Color(0xFFFF470B),
                   ],
-                  begin: FractionalOffset(0.0, 0.6),
-                  end: FractionalOffset(0.0, 1.0),
+                  begin: FractionalOffset(0.0, 0.5),
+                  end: FractionalOffset(0.0, 1.5),
                   stops: [0.0, 1.0],
                   tileMode: TileMode.clamp),
               border: Border.all(
@@ -205,7 +195,7 @@ class OnboardingPage2 extends StatelessWidget {
                       Colors.transparent,
                       Color(0xFFB21111),
                     ],
-                    begin: FractionalOffset(0.0, 0.6),
+                    begin: FractionalOffset(0.0, 0.7),
                     end: FractionalOffset(0.0, 1.0),
                     stops: [0.0, 1.0],
                     tileMode: TileMode.clamp),
@@ -239,7 +229,7 @@ class OnboardingPage3 extends StatelessWidget {
                       Color(0xB2DB2424),
                       Color(0xFFB21111),
                     ],
-                    begin: FractionalOffset(0.0, 0.6),
+                    begin: FractionalOffset(0.0, 0.7),
                     end: FractionalOffset(0.0, 1.0),
                     stops: [0.0, 1.0],
                     tileMode: TileMode.clamp),
@@ -301,7 +291,7 @@ class OnboardingPage3 extends StatelessWidget {
                       Colors.transparent,
                       Color(0xFFB21111),
                     ],
-                    begin: FractionalOffset(0.0, 0.6),
+                    begin: FractionalOffset(0.0, 0.7),
                     end: FractionalOffset(0.0, 1.0),
                     stops: [0.0, 1.0],
                     tileMode: TileMode.clamp),
