@@ -13,10 +13,9 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  onboarding: ^3.1.0
   flame: 1.0.0-releasecandidate.15
-  google_fonts: ^3.0.1
   flutter_neumorphic: ^3.2.0
+  neumorphic_container: ^0.0.1+2
 
 dev_dependencies:
   flutter_test:
@@ -30,6 +29,7 @@ flutter:
 
   assets:
     - assets/Onboarding/
+    - assets/LogSign/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,4 +1,5 @@
 import 'package:fastfood/page/first_start.dart';
+import 'package:fastfood/page/login_sign.dart';
 import 'package:flame/flame.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Onboarding()
+        home: BasicLoginSignPage()
     );
   }
 }
