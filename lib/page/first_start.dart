@@ -1,3 +1,4 @@
+import 'package:fastfood/page/login_sign.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
@@ -77,7 +78,7 @@ class OnboardingPage1 extends StatelessWidget {
                             style: TextStyle(
                               fontFamily: 'Metropolis',
                                color: Colors.white,
-                              fontSize: 45,
+                              fontSize: 35,
                             )),
                       )),
                 ),
@@ -164,7 +165,7 @@ class OnboardingPage2 extends StatelessWidget {
                               softWrap: true,
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 35,
+                                fontSize: 30,
                                 fontFamily: 'Metropolis',
                               )),
                         )),
@@ -254,7 +255,7 @@ class OnboardingPage3 extends StatelessWidget {
 
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 45,
+                                fontSize: 35,
                                 fontFamily: 'Metropolis',
                               )),
                         )),
@@ -291,7 +292,7 @@ class OnboardingPage3 extends StatelessWidget {
               ),
               child: Align(alignment: Alignment(0, 0.9), child: NeumorphicButton(
                 onPressed: () {
-                  debugPrint("onClick");
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => BasicLoginSignPage()));
                 },
                 style: NeumorphicStyle(
                   border: NeumorphicBorder(
