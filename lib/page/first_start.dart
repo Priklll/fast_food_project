@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Onboarding extends StatefulWidget {
@@ -88,7 +89,7 @@ class OnboardingPage1 extends StatelessWidget {
                       decoration:
                       const BoxDecoration(image: DecorationImage(image: AssetImage('assets/Onboarding/pngArtboard 4 1.png'), fit: BoxFit.contain)),
                     )),
-                Expanded(flex: 1, child: Container())
+                Expanded(flex: 2, child: Container())
               ],
             ),
           ),
@@ -176,7 +177,7 @@ class OnboardingPage2 extends StatelessWidget {
                         decoration:
                         const BoxDecoration(image: DecorationImage(image: AssetImage('assets/Onboarding/asset prefArtboard 1 1.png'), fit: BoxFit.contain)),
                       )),
-                  Expanded(flex: 1, child: Container())
+                  Expanded(flex: 2, child: Container())
                 ],
               ),
             ),
@@ -266,7 +267,7 @@ class OnboardingPage3 extends StatelessWidget {
                         decoration:
                         const BoxDecoration(image: DecorationImage(image: AssetImage('assets/Onboarding/pngArtboard 1 1.png'), fit: BoxFit.contain)),
                       )),
-                  Expanded(flex: 1, child: Container())
+                  Expanded(flex: 2, child: Container())
                 ],
               ),
             ),
@@ -290,26 +291,54 @@ class OnboardingPage3 extends StatelessWidget {
                   color: const Color.fromRGBO(255, 75, 58, 100),
                 ),
               ),
-              child: GestureDetector(
-                onTap: () {},
-                child: Align(alignment: Alignment(0, 0.9), child: Container(
-                  alignment: Alignment.center,
-                  width: 180,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 4,
-                      ),
-                    ],
+              child: Align(alignment: Alignment(0, 0.9), child: NeumorphicButton(
+                onPressed: () {
+                  debugPrint("onClick");
+                },
+                style: NeumorphicStyle(
+                  border: NeumorphicBorder(
+                    color: Color(0x33000000),
+                    width: 0.8,
                   ),
-                  child: Text('Get Started!', style: GoogleFonts.ibarraRealNova(textStyle: TextStyle(fontSize: 18, color: Colors.red, fontWeight: FontWeight.bold)),),
-                ),)
-                ,
-              ))
+                  shape: NeumorphicShape.concave,
+                  boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(20)),
+                ),
+                padding: const EdgeInsets.all(12.0),
+                child: Container(
+                  alignment: Alignment.center,
+                    width: 200,
+                    height: 20,
+                    child: Text(
+                      'Get Started!',
+                      style: TextStyle(fontSize: 12, color: Colors.red, fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
+                    ),
+                  ),
+                ),
+              )
+              //   GestureDetector(
+            //     onTap: () {},
+            //     child: Align(alignment: Alignment(0, 0.9), child: Container(
+            //       alignment: Alignment.center,
+            //       width: 180,
+            //       height: 40,
+            //       decoration: BoxDecoration(
+            //         color: Colors.white,
+            //         borderRadius: BorderRadius.circular(20),
+            //         boxShadow: const [
+            //           BoxShadow(
+            //             color: Colors.black,
+            //             blurRadius: 4,
+            //           ),
+            //           ],
+            //         ),
+            //         child: Text(
+            //           'Get Started!',
+            //           style: GoogleFonts.ibarraRealNova(textStyle: TextStyle(fontSize: 18, color: Colors.red, fontWeight: FontWeight.bold)),
+            //         ),
+            //       ),
+            //     ),
+            //   )
+            )
         ],
       )),
     );
