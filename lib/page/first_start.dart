@@ -290,54 +290,29 @@ class OnboardingPage3 extends StatelessWidget {
                   color: const Color.fromRGBO(255, 75, 58, 100),
                 ),
               ),
-              child: Align(alignment: Alignment(0, 0.9), child: NeumorphicButton(
+              child: Align(alignment: Alignment(0, 0.9), child:
+              NeumorphicButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => BasicLoginSignPage()));
                 },
                 style: NeumorphicStyle(
-                  border: NeumorphicBorder(
-                    color: Color(0x33000000),
-                    width: 0.8,
-                  ),
+                  color: Colors.white,
+                  depth: 3,
                   shape: NeumorphicShape.concave,
+                  lightSource: LightSource.top,
                   boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(20)),
                 ),
                 padding: const EdgeInsets.all(12.0),
                 child: Container(
                   alignment: Alignment.center,
-                    width: 200,
-                    height: 20,
-                    child: Text(
-                      'Get Started!',
-                      style: TextStyle(fontSize: 12, color: Colors.red, fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
+                  width: 280,
+                      height: 30,
+                      child: Text(
+                        'Get Started!',
+                        style: TextStyle(fontSize: 12, color: Colors.red, fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
+                      ),
                     ),
-                  ),
-                ),
-              )
-              //   GestureDetector(
-            //     onTap: () {},
-            //     child: Align(alignment: Alignment(0, 0.9), child: Container(
-            //       alignment: Alignment.center,
-            //       width: 180,
-            //       height: 40,
-            //       decoration: BoxDecoration(
-            //         color: Colors.white,
-            //         borderRadius: BorderRadius.circular(20),
-            //         boxShadow: const [
-            //           BoxShadow(
-            //             color: Colors.black,
-            //             blurRadius: 4,
-            //           ),
-            //           ],
-            //         ),
-            //         child: Text(
-            //           'Get Started!',
-            //           style: GoogleFonts.ibarraRealNova(textStyle: TextStyle(fontSize: 18, color: Colors.red, fontWeight: FontWeight.bold)),
-            //         ),
-            //       ),
-            //     ),
-            //   )
-            )
+                  )))
         ],
       )),
     );
