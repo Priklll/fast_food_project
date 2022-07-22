@@ -75,6 +75,12 @@ flutter:
         - asset: assets/fonts/roboto/Roboto-Light.ttf
         - asset: assets/fonts/roboto/Roboto-Medium.ttf
         - asset: assets/fonts/roboto/Roboto-Regular.ttf
+    - family: Gilroy
+      fonts:
+        - asset: assets/fonts/gilroy/Gilroy-Bold.ttf
+        - asset: assets/fonts/gilroy/Gilroy-Medium.ttf
+        - asset: assets/fonts/gilroy/Gilroy-Regular.ttf
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

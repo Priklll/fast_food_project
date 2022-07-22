@@ -20,7 +20,7 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
   void initState() {
     login = true;
     sign = false;
-    loginForgot = false;
+    loginForgot = true;
     super.initState();
   }
 
@@ -127,10 +127,20 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
                   ),
                 ),
               )),
-          Expanded(flex: 6, child: sign ? Sign() : Login()),
+          Expanded(flex: 6, child: openWidget()),
         ],
       ),
     );
+  }
+
+  Widget openWidget() {
+    if (sign == true) {
+      return Sign();
+    } else if (loginForgot == true) {
+      return ForgotPassword();
+    } else {
+      return Login();
+    }
   }
 
   Widget Login() {
@@ -194,12 +204,19 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
         const Spacer(),
         Row(children: [
           const Spacer(),
-          Text(
-            'Forgot password?',
-            style: TextStyle(fontSize: 14, color: Color(0xffFA4A0C), fontFamily: 'Poppins', fontWeight: FontWeight.w600),
-          ),
-          const Spacer(flex: 4),
-        ],),
+            GestureDetector(
+              onTap: () {
+                setState((){
+                  loginForgot = true;
+                });
+              },
+              child: Text(
+                'Forgot password?',
+                style: TextStyle(fontSize: 14, color: Color(0xffFA4A0C), fontFamily: 'Poppins', fontWeight: FontWeight.w600),
+              ),
+            ),
+            const Spacer(flex: 4),
+          ],),
         const Spacer(),
 
         ///              ///
@@ -538,7 +555,87 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
     );
   }
 
-  Widget ForgotPasvord() {
-    return Column();
+  Widget ForgotPassword() {
+    return
+      Padding(
+      padding: EdgeInsets.only(left: 40),
+      child:
+      Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          const Spacer(flex: 2,),
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                loginForgot = false;
+              });
+            },
+            child: Image.asset(
+              'assets/LogSign/arrow_back.png',
+              scale: 0.8,
+            ),
+          ),
+           const Spacer(flex: 2,),
+          Text('Forgot', style: TextStyle(fontFamily: 'Nunito', fontSize: 36, fontWeight: FontWeight.bold, color: Color(0xffF8774A))),
+          
+          Text('password?', style: TextStyle(fontFamily: 'Nunito', fontSize: 36, fontWeight: FontWeight.bold, color: Color(0xffF8774A))),
+          const Spacer(flex: 2,),
+          Neumorphic(
+            // margin: EdgeInsets.only(left: 25, right: 25),
+            style: NeumorphicStyle(
+                depth: 3, color: Colors.white, lightSource: LightSource.top, boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(10))),
+            child: Container(
+              width: 290,
+              height: 55,
+              child: TextFormField(
+                textAlign: TextAlign.center,
+                keyboardType: TextInputType.emailAddress,
+                // controller: _controllerEmail,
+                // onSubmitted: _changeEmail,
+                // onChanged: _changeEmail,
+              decoration: InputDecoration(
+                prefixIcon: Image.asset('assets/LogSign/Mail.png'),
+                prefixIconColor: Color(0xff626262),
+                labelText: 'Enter your email address',
+                labelStyle: const TextStyle(fontSize: 12, color: Color(0xff676767), fontFamily: 'Gilroy'),
+                fillColor: Colors.white,
+                filled: true,
+              ),
+              style: const TextStyle(fontSize: 16, color: Colors.black, fontFamily: 'Nunito'),
+              ),
+            ),
+          ),
+          const Spacer(),
+          Container(width: 240,
+            height: 55, child: Image.asset('assets/LogSign/text.png', scale: 1.1,),),
+          const Spacer(),
+          Text('Send code', style: TextStyle(fontFamily: 'Gilroy', fontSize: 24, fontWeight: FontWeight.bold, color: Color(0xffB2B2B2))),
+          const Spacer(),
+          Row(
+            children: <Widget>[
+            const Spacer(flex: 5,),
+            NeumorphicButton(
+              onPressed: () {},
+              style: NeumorphicStyle(
+                color: Color(0xffF8774A),
+                shadowDarkColor: Color(0xffF8774A),
+                depth: 4,
+                shape: NeumorphicShape.flat,
+                lightSource: LightSource.top,
+                boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(30)),
+              ),
+              padding: const EdgeInsets.all(12.0),
+              child: Container(
+                alignment: Alignment.center,
+                width: 30,
+                height: 30,
+                child: Image.asset('assets/LogSign/Arrow.png')
+              ),
+            ), const Spacer(),
+          ],),const Spacer(flex: 2,),
+        ],
+      ),
+    );
   }
 }
