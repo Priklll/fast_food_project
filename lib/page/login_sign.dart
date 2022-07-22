@@ -20,12 +20,13 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
   void initState() {
     login = true;
     sign = false;
-    loginForgot = true;
+    loginForgot = false;
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+
     return Material(
       child: Column(
         children: <Widget>[
@@ -166,7 +167,7 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
               // onChanged: _changeEmail,
               decoration: InputDecoration(
                 labelText: 'Username, Mobile Number',
-                labelStyle: const TextStyle(fontSize: 16, color: Color(0xffA0A0A0), fontFamily: 'Nunito'),
+                labelStyle: const TextStyle(fontSize: 16, color: Color(0x99A0A0A0), fontFamily: 'Nunito'),
                 fillColor: Colors.white,
                 filled: true,
               ),
@@ -194,7 +195,7 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
                 // onChanged: _changeEmail,
                 decoration: InputDecoration(
                   labelText: 'Password',
-                  labelStyle: const TextStyle(fontSize: 16, color: Color(0xffA0A0A0), fontFamily: 'Nunito'),
+                  labelStyle: const TextStyle(fontSize: 16, color: Color(0x99A0A0A0), fontFamily: 'Nunito'),
                   fillColor: Colors.white,
                   filled: true,
                 ),
@@ -411,7 +412,7 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
               // onChanged: _changeEmail,
               decoration: InputDecoration(
                 labelText: 'Full Name',
-                labelStyle: const TextStyle(fontSize: 16, color: Color(0xffA0A0A0), fontFamily: 'Nunito'),
+                labelStyle: const TextStyle(fontSize: 16, color: Color(0x99A0A0A0), fontFamily: 'Nunito'),
                 fillColor: Colors.white,
                 filled: true,
               ),
@@ -439,7 +440,7 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
               // onChanged: _changeEmail,
               decoration: InputDecoration(
                 labelText: 'Mobile Number',
-                labelStyle: const TextStyle(fontSize: 16, color: Color(0xffA0A0A0), fontFamily: 'Nunito'),
+                labelStyle: const TextStyle(fontSize: 16, color: Color(0x99A0A0A0), fontFamily: 'Nunito'),
                 fillColor: Colors.white,
                 filled: true,
               ),
@@ -467,7 +468,7 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
               // onChanged: _changeEmail,
               decoration: InputDecoration(
                 labelText: 'Password',
-                labelStyle: const TextStyle(fontSize: 16, color: Color(0xffA0A0A0), fontFamily: 'Nunito'),
+                labelStyle: const TextStyle(fontSize: 16, color: Color(0x99A0A0A0), fontFamily: 'Nunito'),
                 fillColor: Colors.white,
                 filled: true,
               ),
@@ -495,7 +496,7 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
               // onChanged: _changeEmail,
               decoration: InputDecoration(
                 labelText: 'Confirm Password',
-                labelStyle: const TextStyle(fontSize: 16, color: Color(0xffA0A0A0), fontFamily: 'Nunito'),
+                labelStyle: const TextStyle(fontSize: 16, color: Color(0x99A0A0A0), fontFamily: 'Nunito'),
                 fillColor: Colors.white,
                 filled: true,
               ),
@@ -578,7 +579,7 @@ class _BasicLoginSignPageState extends State<BasicLoginSignPage> {
           ),
            const Spacer(flex: 2,),
           Text('Forgot', style: TextStyle(fontFamily: 'Nunito', fontSize: 36, fontWeight: FontWeight.bold, color: Color(0xffF8774A))),
-          
+
           Text('password?', style: TextStyle(fontFamily: 'Nunito', fontSize: 36, fontWeight: FontWeight.bold, color: Color(0xffF8774A))),
           const Spacer(flex: 2,),
           Neumorphic(
